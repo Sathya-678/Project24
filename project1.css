@@ -1,0 +1,43 @@
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#222;
+padding:10px 20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+color:white;
+}
+
+.logo img{
+width:40px;
+margin-right:10px;
+}
+
+.search-box input{
+padding:6px;
+}
+
+.search-box button{
+padding:6px 10px;
+}
+
+.menu{
+display:flex;
+list-style:none;
+margin-left: 20px;
+text-align: center;
+}
+
+.menu li{
+margin-left:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+
+}
