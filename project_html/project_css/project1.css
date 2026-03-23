@@ -1,0 +1,715 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f7ff;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---- Remove bullet points from lists ---- */
+ul {
+  list-style: none;
+}
+
+/* ---- Make images not overflow ---- */
+img {
+  width: 100%;
+  display: block;
+}
+
+
+/* ==============================
+   NAVBAR STYLES
+   Sticky so it stays on top when scrolling
+============================== */
+.navbar {
+  background-color: #ffffff;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Logo part */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #5b21b6;
+  /* Purple color for brand feel */
+}
+
+/* Nav links - the menu */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 2px;
+  /* Adding underline on hover */
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* Hover effect on nav links */
+.nav-links a:hover {
+  color: #5b21b6;
+  border-bottom-color: #5b21b6;
+}
+
+/* Search bar area */
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-input {
+  padding: 8px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #7c3aed;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px;
+}
+
+
+/* ==============================
+   HERO SECTION STYLES
+   The big banner at the top
+============================== */
+.hero-section {
+  /* I used gradient background, it looks cool */
+  background: linear-gradient(135deg, #6d28d9, #3b82f6);
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  /* line height to give breathing room */
+  line-height: 1.2;
+}
+
+.hero-desc {
+  font-size: 17px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  /* Making text a bit transparent, looks good */
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #6d28d9;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.hero-btn:hover {
+  background-color: #ede9fe;
+  transform: scale(1.04);
+}
+
+
+/* ==============================
+   FEATURES SECTION STYLES
+   The "why choose us" cards
+============================== */
+.features-section {
+  padding: 60px 30px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Section title - used in multiple places */
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e1e2e;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+/* Grid for feature cards - 4 in a row on desktop */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card {
+  background-color: #f5f3ff;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  /* small shadow */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(109, 40, 217, 0.15);
+}
+
+.feature-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #5b21b6;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* ==============================
+   PRODUCTS SECTION STYLES
+   Main product listing area
+============================== */
+.products-section {
+  padding: 60px 30px;
+  background-color: #f8f7ff;
+  text-align: center;
+}
+
+/* Product grid - 4 columns on desktop */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Individual product card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  text-align: left;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+/* Hover effect on product card */
+.product-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.18);
+}
+
+.product-img {
+  /* Fixed height so all images look same size */
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e1e2e;
+  margin-bottom: 6px;
+}
+
+.product-desc {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+  /* Limit to 2 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #5b21b6;
+  margin-bottom: 12px;
+}
+
+/* Add to cart button */
+.add-to-cart {
+  width: 100%;
+  background-color: #5b21b6;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.add-to-cart:hover {
+  background-color: #7c3aed;
+  transform: scale(1.02);
+}
+
+
+/* ==============================
+   SPECIAL SECTIONS (Student + Women)
+   These should look different from the rest
+============================== */
+
+/* Common styles for both special sections */
+.special-section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.special-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Student offers - blue theme */
+.student-offers {
+  background-color: #eff6ff;
+  border-top: 4px solid #3b82f6;
+}
+
+.student-offers h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 12px 0 10px;
+}
+
+.student-offers p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Women special - purple/pink theme */
+.women-special {
+  background-color: #fdf4ff;
+  border-top: 4px solid #a855f7;
+}
+
+.women-special h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6d28d9;
+  margin: 12px 0 10px;
+}
+
+.women-special p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Badge labels like "Limited Time" */
+.special-badge {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.women-badge {
+  background-color: #a855f7;
+}
+
+/* Cards inside special sections */
+.offer-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.offer-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  width: 240px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.09);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+}
+
+.offer-card img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.offer-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1e1e2e;
+}
+
+/* Strikethrough for old price */
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+/* New discounted price */
+.new-price {
+  color: #5b21b6;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* Offer button */
+.offer-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.offer-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Women button has different color */
+.women-btn {
+  background-color: #a855f7;
+}
+
+.women-btn:hover {
+  background-color: #9333ea;
+}
+
+
+/* ==============================
+   NEWSLETTER SECTION
+   Simple email signup
+============================== */
+.newsletter-section {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.newsletter-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.newsletter-section p {
+  font-size: 16px;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+/* The email form */
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.email-input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  width: 320px;
+  outline: none;
+}
+
+.subscribe-btn {
+  background-color: #ffffff;
+  color: #5b21b6;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.subscribe-btn:hover {
+  background-color: #ede9fe;
+  transform: scale(1.03);
+}
+
+.newsletter-note {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+
+/* ==============================
+   FOOTER STYLES
+   Bottom section of the page
+============================== */
+.footer {
+  background-color: #1e1b4b;
+  color: #c4b5fd;
+  padding: 50px 30px 0;
+}
+
+/* 4 column grid for footer */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #a5b4fc;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #3730a3;
+  padding-bottom: 8px;
+}
+
+/* Footer link list */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #a5b4fc;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Social media emoji icons */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-icon {
+  font-size: 24px;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  transform: scale(1.3);
+}
+
+/* Copyright bar at very bottom */
+.footer-bottom {
+  border-top: 1px solid #312e81;
+  padding: 18px 0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #818cf8;
+}
+
+
+/* ==============================
+   RESPONSIVE STYLES
+   Making things look ok on mobile
+   (basic level - still learning media queries!)
+============================== */
+
+/* Tablet - 2 columns */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile - single column */
+@media (max-width: 700px) {
+
+  /* Navbar stacks on mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .search-input {
+    width: 160px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+  }
+
+  /* Single column on mobile */
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+}
+
+/* Medium screens - 2 columns for products */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
