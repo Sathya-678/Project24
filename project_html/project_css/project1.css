@@ -280,7 +280,8 @@ img {
 .product-img {
   /* Fixed height so all images look same size */
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   width: 100%;
 }
 
